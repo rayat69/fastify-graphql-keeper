@@ -1,0 +1,8 @@
+type Mutation {
+  createTodo(input: CreateTodoInput!): Todo
+  updateTodo(id: ID!, input: UpdateTodoInput): Todo
+  deleteTodo(id: ID!): Todo
+  copyTodo(id: ID!): Todo
+  createLabel(name: String!): Label
+  deleteLabel(id: ID!): Label
+}

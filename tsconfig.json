@@ -1,0 +1,9 @@
+{
+    "extends": "fastify-tsconfig",
+    "compilerOptions": {
+        "outDir": "build",
+        "noUnusedLocals": false,
+        "noUnusedParameters": false
+    },
+    "include": ["src/**/*.ts"]
+}

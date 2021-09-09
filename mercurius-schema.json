@@ -1,0 +1,9 @@
+[
+  "input UpdatesNoteInput {\n  text: String!\n  isCompleted: Boolean!\n}\n\ninput CreateTodoInput {\n  title: String!\n  notes: [String!]!\n  labels: [ID!]!\n  color: String\n  isChechBoxMode: Boolean\n}\n\ninput UpdateTodoInput {\n  title: String\n  notes: [UpdatesNoteInput!]\n  labels: [ID!]\n  color: String\n  isChechBoxMode: Boolean\n}",
+  "type Label {\n  _id: ID!\n  name: String!\n  todos: [Todo!]!\n}",
+  "type Mutation {\n  createTodo(input: CreateTodoInput!): Todo\n  updateTodo(id: ID!, input: UpdateTodoInput): Todo\n  deleteTodo(id: ID!): Todo\n  copyTodo(id: ID!): Todo\n  createLabel(name: String!): Label\n  deleteLabel(id: ID!): Label\n}",
+  "type Note {\n  text: String!\n  isCompleted: Boolean!\n}",
+  "type Query {\n  todos: [Todo!]!\n  labels: [Label!]!\n  user: User\n}",
+  "type Todo {\n  _id: ID!\n  title: String!\n  notes: [Note!]!\n  labels: [Label!]!\n  color: String!\n  isChechBoxMode: Boolean!\n  createdAt: String!\n}",
+  "type User {\n  _id: ID!\n  email: String!\n  name: String!\n  todos: [Todo!]!\n  labels: [Label!]!\n  listMode: Boolean!\n  darkMode: Boolean!\n}"
+]

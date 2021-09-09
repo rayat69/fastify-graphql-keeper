@@ -1,0 +1,20 @@
+input UpdatesNoteInput {
+  text: String!
+  isCompleted: Boolean!
+}
+
+input CreateTodoInput {
+  title: String!
+  notes: [String!]!
+  labels: [ID!]!
+  color: String
+  isChechBoxMode: Boolean
+}
+
+input UpdateTodoInput {
+  title: String
+  notes: [UpdatesNoteInput!]
+  labels: [ID!]
+  color: String
+  isChechBoxMode: Boolean
+}

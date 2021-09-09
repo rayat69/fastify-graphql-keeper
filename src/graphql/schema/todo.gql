@@ -1,0 +1,9 @@
+type Todo {
+  _id: ID!
+  title: String!
+  notes: [Note!]!
+  labels: [Label!]!
+  color: String!
+  isChechBoxMode: Boolean!
+  createdAt: String!
+}

@@ -1,0 +1,5 @@
+type Label {
+  _id: ID!
+  name: String!
+  todos: [Todo!]!
+}
